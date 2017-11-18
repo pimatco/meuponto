@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Monsat Rastreamento
+
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+    <ion-item>
+        <ion-card-header>São {{hora}} do dia {{data}}.
+
+        </ion-card-header>
+
+    </ion-item>
+
+    <ion-list>
+        <ion-item *ngFor="let agendamento of agendamentos" (click)="selecionaUser(agendamento)">
+            <ion-avatar item-start>
+                <ion-icon ios="ios-person" md="md-person"></ion-icon>
+            </ion-avatar>
+            <h2>{{agendamento.nome}}</h2>
+
+        </ion-item>
+    </ion-list>
+
+
+</ion-content>
